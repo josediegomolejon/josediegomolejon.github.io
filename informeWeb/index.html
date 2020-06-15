@@ -1,3 +1,4 @@
+  
 
   <!DOCTYPE html>
   <html>
@@ -11,30 +12,27 @@
       <title>Informe Mercado Diario</title>
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
-        .demo-iframe-holder {
-            width: 200px;
-            height: 200px;
-            -webkit-overflow-scrolling: touch;
-            overflow-y: scroll;
-        }
-        .demo-iframe-holder iframe{
-            height: 100%;
-            width: 100%;
-        }
     </style>
     </head>
 
     <body>
 
          
-<div class="demo-iframe-holder">
-    <iframe  id="ventanaDS" src="https://datastudio.google.com/embed/reporting/1o5Sxj5vIt2oYbYs-RoDfTnEOLKJg4Yty/page/jSKUB" frameborder="0" style="border:0" ></iframe>
-</div>
+
+                  <iframe  id="ventanaDS" width="100%" src="https://datastudio.google.com/embed/reporting/1o5Sxj5vIt2oYbYs-RoDfTnEOLKJg4Yty/page/jSKUB" frameborder="0" style="border:0" ></iframe>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
     
     
     </body>
-    <script>//document.getElementById('ventanaDS').height=screen.availHeight;</script>
+    <script>
+    function load() {
+        document.getElementById('ventanaDS').height=screen.availHeight;
+    }
+
+    window.onload = load;
+        </script>
   </html>
+
+  
